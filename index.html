@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客案例</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /> -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:300,400,700'>
+</head>
+<body>
+    <!-- body和container都是随着页面的扩张而变化的但有什么不同呢？ -->
+    <div class="container">
+        <header>
+            <!-- 就仅仅是头部的范围 -->
+            <div class="biaoti">
+                <a href="">luwenyi的个人博客</a>
+            </div>
+            <div class="logo">
+                <a href="https://mail.qq.com/"><img src="image\185078emailmailstreamline.png" alt=""></a>
+                <a href="https://www.douban.com/"><img src="image\douban (1).png" alt=""></a>
+                <a href="https://git-scm.com/"><img src="image\git.png" alt=""></a>
+                <a href="https://github.com/"><img src="image\github.png" alt=""></a>
+                <a href="#"><img src="image\rss.png" alt=""></a>
+                <a href="https://y.qq.com/"><img src="image\yinyue.png" alt=""></a>
+                <!-- a标签是行内元素不会另起一行 -->
+            </div>
+        </header>
+        <!-- 和header同级可以让下面的不适用于flex布局不在同一行显示而换下一行 -->
+        <div class="nav">
+                <div class="search">
+                    <a href="https://zh.wikipedia.org/wiki/Java">Java</a>
+                    <a href="https://leetcode-cn.com/">算法</a>
+                    <a href="http://ncre.neea.edu.cn/">运维</a>
+                    <a href="" target="_blank">考证</a>
+                    <a href="" target="_blank">读书总结</a>
+                    <a href="https://github.com/">GitHub</a>
+                    <a href="" target="_blank">码云</a>
+                    <a href="https://www.douban.com/">豆瓣</a>
+                    <a href="" target="_blank">留言板</a>
+                    <a class="move"></a>
+                </div>
+                <form action="" class="shuru">
+                    <!-- 因为父元素整个盒子设置了flex所以和紧跟着这个元素同级的后面继续排列
+                    至于高度已经随着父级盒子的高度已经设置了宽度就看子元素是怎么设置了 -->
+                    <input type="text" placeholder="搜你所想" required>
+                </form>
+                <a href=""><img src="image\sousuo.png" alt="" class="sousuo"></a>
+        </div>  
+        <main>
+            <div class="fangkuang">
+                <div class="blue">
+                    <div class="red">
+                        <ul class="list">
+                            <!-- 这里ul和li都是块状元素占一整行但好像因为后面的都脱离文档流
+                            了所以就不会影响？ -->
+                            <li><a href="#我的大学生活">我的大学生活</a></li>
+                            <li><a href="#我的学习经历">我的学习经历</a></li>
+                            <li><a href="#我做过的项目">我做过的项目</a></li>
+                            <li><a href="#我的比赛经历">我的比赛经历</a></li>
+                            <li><a href="#我的学习经历">我的学习经历</a></li>
+                            <li>关于我</li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="zhongxin">
+                <div class="box">
+                    <div class="buju">
+                        <h3>我的大学生活：</h3>
+                        <div class="life">
+                            <ul>
+                                <li>
+                                    <img src="image\studylife\children-5833719__340 (1).png" alt="">
+                                </li>
+                                <li>
+                                    <img src="image\studylife\student-3500990__340 (1).png" alt="">
+                                </li>
+                                <li>
+                                    <img src="image\studylife\writing-1149962__340.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="buju">
+                        <h3 id="我的学习经历">我的学习经历：</h3>
+                    </div>   
+                </div>
+                <div class="box">
+                    <div class="buju">
+                        <h3 id="我做过的项目">我做过的项目：</h3>
+                    </div>   
+                </div>
+                <div class="box">
+                    <div class="buju">
+                        <h3 id="我的比赛经历">我的比赛经历</h3>
+                    </div>   
+                </div>
+                <div class="box">
+                    <div class="buju">
+                        <h3 id="我的学习经历">我的学习经历：</h3>
+                    </div>   
+                </div>
+            </div>
+            <aside>
+                <div class="box2">
+                    <h3>关于我：</h3>
+                </div>
+                <div class="box3"></div>
+                <div class="box4"></div>
+            </aside>
+        </main>
+        <footer>
+            <div class="lowest">
+                <h5>Copyright © 2020-2099|<span class="important">京ICP备19004722号</span>  |  | Theme By Specs</h5>
+            </div>
+            <div class="secondlow">
+                <h2>友情链接:</h2>
+                <div class="tuozhan">
+                    <a href="">iceH's Blog</a>
+                    <a href="">仲威的博客</a>
+                    <a href="">俄罗斯方块</a>
+                    <a href="">六阿哥博客</a>
+                    <a href="">太空船博客</a>
+                    <a href="">太空船博客</a>
+                    <a href="">掘金专栏</a>
+                    <a href="">朴实的追梦者</a>
+                    <a href="">艺小昔个人博客</a>
+                </div>    
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>
