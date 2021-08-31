@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 1800px;
+    /* 后面的值的设置是根据什么设置的 */
+    /* 最小宽度设置为1200像素，当浏览器宽度小于该值时，该元素不再自适应，而是部分元素被遮挡住 */
+    background-color: aliceblue;
+    background: url(https://i.pinimg.com/originals/fc/c7/47/fcc7474f2a2d875074201700fd4c712f.png) no-repeat center center;
+    background-size: 100% auto;
+    
+    
+
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    /* 相对于父元素居中对齐 */
+    /* overflow: hidden; */
+    /* 超过这个范围就进行隐藏 */
+}
+li {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    display: flex;
+    /* 和float作用相同，让子级元素相对父元素header的margin而不是
+    网页窗口的距离 */
+}
+
+.biaoti {
+    margin-top: 20px;
+    margin-left: 200px;
+    color: white;
+    font-size: 20px;  
+}
+
+.biaoti a {
+    text-decoration: none;
+    color: white;
+}
+.logo {
+    margin-top: 20px;
+    margin-left: 500px;
+    
+}
+
+.logo img {
+    height: 30px;
+    width: 30px;
+}
+
+.logo a {
+    padding-right: 5px;
+}
+
+.nav {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    /* position: absolute;
+    top: 75px; */
+    /* 重大错误设置了之后脱离了文本流下面的元素就直接上来了 */
+    background-color: white   
+}
+
+.search a {
+    display: inline-block;
+}
+.move {
+    position: absolute;
+    left: 0;
+    /* 靠左窗口靠近 */
+    /* top:40; */
+    top: 135px;
+    /* 这好像是相对于窗口顶部的位置，因为没有设置position */
+    border-bottom: 3px solid red;
+    width: 10px;
+    opacity: 0;
+    transition: ease-in-out 0.4s;
+    /* 有几个属性可以写的：移动的方式，移动的快慢，移动的时间，延迟的时间 */
+}
+
+.search a:nth-of-type(1):hover ~ .move {
+    left: 450px;
+    opacity: 1;
+}
+
+.search a:nth-of-type(2):hover ~ .move {
+    /* 兄弟选择符，位置无须紧邻，只须同层级，A~B 选择A元素之后所有同层级B元素。 */
+    left: 508px;
+    opacity: 1;
+}
+
+.search a:nth-of-type(3):hover ~ .move {
+    left: 565px;
+    opacity: 1;
+}
+
+.search a:nth-of-type(4):hover ~ .move {
+    left: 620px;
+    opacity: 1;
+}
+
+.search a:nth-of-type(5):hover ~ .move {
+    left: 680px;
+    opacity: 1;
+}
+
+.search a:nth-of-type(6):hover ~ .move {
+    left: 766px;
+    opacity: 1;
+}
+
+.search a:nth-of-type(7):hover ~ .move {
+    left: 846px;
+    opacity: 1;
+}
+
+.search a:nth-of-type(8):hover ~ .move {
+    left: 902px;
+    opacity: 1;
+}
+.search a:nth-of-type(9):hover ~ .move {
+    left: 960px;
+    opacity: 1;
+}
+
+
+
+.nav .search {
+    margin-top: 20px;
+    margin-left: 100px;
+    /* 注意他相对的是哪一个父元素，所有要在nav上设置 */
+}
+
+.search a {
+    text-decoration: none;
+    color: black;
+    padding-right: 20px;
+}
+
+.search a:nth-of-type(3), .search a:hover {
+    color: brown;
+}
+
+.shuru input {
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+
+.sousuo {
+    height: 30px;
+    width: 30px;
+    /* 注意啊此时的相对位置就是上一个元素之后的位置同时又在父元素之内 */
+    margin-top: 13px;
+    margin-left: 5px;
+    background-color: rgb(241, 85, 85);
+    border-radius: 10px;
+}
+
+
+    
+
+.lowest {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    top: 130px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+}
+
+.secondlow {
+    height: 110px;
+    width: 100%;
+    background-color: rgb(97, 96, 96);
+    position: relative;
+    bottom: 80px;
+    /* margin-top: 100px; */
+    /* padding-left: 100px; */
+}
+
+.secondlow h2 {
+    margin-bottom: 0;
+    margin-left: 200px;
+    /* 因为h2是块状元素会独占一行所以蓝色会占满整一行的位置 */
+}
+
+.secondlow a {
+    text-decoration: none;
+    color: red;
+    padding-right: 10px;
+}
+.tuozhan {
+    margin-left: 200px;
+}
+
+.important {
+    color: red;
+}
+
+.lowest h5 {
+    color: white;
+    /* 这里想让他在lowest盒子里水平垂直居中有几种办法 */
+    margin: 0 auto;
+    text-align: center;
+    /* 文本水平居中？ */
+    /* margin-top: 40px; */
+    padding-top: 40px;
+    /* 这里是相对lowest这个盒子位置设置的 */
+    
+}
+
+.box {
+    width: 100%;
+    /* 相对父元素的100% */
+    /* 设定盒子的宽度，哪怕最后**也会自动补齐 */
+    height: 280px;
+    background-color: white;
+    margin-bottom: 20px;
+    /* margin-left: 100px; */
+    opacity: 0.7;
+    
+    
+}
+
+
+.zhongxin {
+    margin-top: 30px;
+    width: 60%;
+   
+    
+    
+}
+aside {
+    width: 30%;
+    margin-top: 30px;
+}
+
+main {
+    display: flex;
+}
+
+.box2 {
+    width: 300px;
+    height: 800px;
+    margin-bottom: 30px;
+    background-color: rgb(203, 243, 124);
+    opacity: 0.7;
+    margin-left: 50px;
+    /* 在父元素的基础上移动 */
+}
+
+.box3 {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(247, 156, 140);
+    margin-bottom: 30px;
+    opacity: 0.7;
+    margin-left: 50px;
+}
+
+.box4 {
+    width: 300px;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+    opacity: 0.7;
+    margin-left: 50px;
+}
+
+/* .box h3 {
+    padding-top: 20px;
+    padding-left: 20px; */
+    
+    /* 可以在css布局中找到类似的 */
+/* } */
+
+/* .box2 h3 {
+    padding-top: 20px;
+    padding-left: 20px;
+} */
+
+.buju {
+    padding: 20px 20px 20px 20px;
+}
+
+.life {
+    width: 250px;
+    height: 167px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.life ul {
+    display: flex;
+    width: 100%;
+    height: 167px;
+    margin: 0;
+    padding: 0;
+    animation: move 9s linear infinite 0s normal;
+}
+
+.life ul li img {
+    width: 250px;
+    height: 167px;
+}
+
+
+@keyframes move {
+    0%{
+        margin-left: 0;
+    }
+    32% {
+        margin-left: 0;
+    }
+    33% {
+        margin-left: -250px;
+    }
+    65% {
+        margin-left: -250px;
+    }
+    66% {
+        margin-left: -500px;
+    }
+    100% {
+        margin-left: -500px;
+    }
+}
+
+.box:hover {
+    border: 1px solid blue;
+    opacity: 1;
+}
+
+/* .fangkuang { */
+    /* width: 400px; */
+    /* padding-right: 50px;
+} */
+
+.blue {
+    width: 150px;
+    /* background-color: ; */
+    height: 100%;
+}
+
+.red {
+    width: 1500px;
+    height: 100%;
+}
+
+.list li {
+    line-height: 40px;
+    font-size: 18px;
+    
+    box-sizing: border-box;
+    
+}
+.list li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
